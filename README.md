@@ -26,7 +26,7 @@ for line in infile:
 
  else:
 
- filecontents = filecontents + ' ' #replace punctuations and newline with a 
+ filecontents = filecontents + ' ' 
 
 space
 
@@ -35,8 +35,6 @@ space
 wordFreq = {}
 
 wordList = filecontents.split()
-
-#Calculate word Frequency
 
 for word in wordList:
 
@@ -47,23 +45,8 @@ for word in wordList:
  else:
 
  wordFreq[word] += 1
-
  
-
-# print(wordFreq)
-
- 
-
-# for word, frequency in wordFreq.items():
-
-# print(word, "occurs", frequency, "times")
-
-#Sort Dictionary based on values in descending order
-
-sortedWordFreq = sorted(wordFreq.items(), key=lambda x:x[1], reverse=True )
-# print(type(sortedWordFreq))
-
-# print(sortedWordFreq)
+sortedWordFreq = sorted(wordFreq.items(), key=lambda x:x[1], reverse=True)
 
 #Display 10 most frequently appearing words with their count
 
